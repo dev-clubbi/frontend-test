@@ -1,7 +1,7 @@
 # frontend-test
 Teste da clubbi para frontend
 
-Construa uma SPA (single page application) que consuma as API's dos (Estudios Ghibli)[https://ghibliapi.herokuapp.com/]
+Construa uma SPA (single page application) que consuma as API's dos Estudios Ghibli https://ghibliapi.herokuapp.com/
 
 pré requisitos
 
