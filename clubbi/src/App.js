@@ -12,7 +12,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <h1>Clubbi</h1>
+        <h1 className='fw-bold'>Clubbi</h1>
         <section>
           <Actor />
           <Films />

@@ -4,6 +4,29 @@
   box-sizing: border-box;
 }
 
-.App {
+.style {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 0.5em;
+}
+
+.form-control {
+  width: auto;
+}
+
+.fw-bold {
   text-align: center;
+  font-size: 2.5em;
+}
+
+.fw-bold:hover {
+  color:blueviolet;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color:cornsilk;
+    text-align: center;
+  }
 }
