@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# frontend-test
+Teste da Clubbi para frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Construa uma SPA (_single page application_) que consuma as [API's dos Estudios Ghibli](https://ghibliapi.herokuapp.com/).
 
-## Available Scripts
 
-In the project directory, you can run:
+### Pré-requisitos
 
-### `npm start`
+Utilizando sua aplicação, devemos conseguir procurar por filmes, atores e locações e esses dados devem ser exibidos em uma forma de boa leitura.
+Crie os filtros que achar necessário e as ordenações que achar mais úteis para cada _endpoint_.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tecnologias
 
-### `npm test`
+Aqui na __Clubbi__, usamos _React_ com _Redux_ e _Typescript_ no nosso frontend, mas sinta-se à vontade para fazer com o _framework_ que se sentir mais confortável. Pode usar apenas _Javascript_ puro também.
+O que queremos é ver como você escreve seu código e como você pensa. O _framework_ é o menos importante.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Extras
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Conteinerização da Aplicação
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Não é necessário, mas caso consiga, faça um arquivo _docker_ para subir sua aplicação
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- material em ingles sobre docker: https://javascript.plainenglish.io/frontend-development-with-docker-a-simplified-guide-c869f6ee0fe8
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- material em português de docker: https://github.com/gomex/docker-para-desenvolvedores
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+### Testes
+Gostamos de testes e os escrevemos para nossos programas. Caso consiga, escreva testes para sua aplicação.
+Para testes tipo _End to end_ recomendamos observar o [cypress](https://www.cypress.io/).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Caso não saiba fazer testes não se preocupe.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+> Bom desenvolvimento!
