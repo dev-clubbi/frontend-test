@@ -1,8 +1,18 @@
-import React, { useContext } from 'react';
-import myContext from '../context/myContext';
+import React, { useState, useEffect } from 'react';
+// import myContext from '../../../context/myContext';
+import getAPI from '../../../services/getApi';
 
-function Table() {
-  const { data } = useContext(myContext);
+function FilmTable() {
+  const [data, setData] = useState([]);
+  // const [endpoint, setEndpoint ] = useState('films');
+
+  useEffect(() => {
+      const filmsList = async () => {
+        const { data } = await getAPI('films');
+        setData(data);
+      };
+      filmsList();
+  }, []);
 
   return (
     <table>
@@ -59,4 +69,4 @@ function Table() {
   );
 }
 
-export default Table;
+export default FilmTable;

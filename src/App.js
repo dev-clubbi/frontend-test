@@ -1,13 +1,17 @@
 import React from 'react';
+import {
+  Switch, Route,
+} from 'react-router-dom';
 import './App.css';
-import Provider from './context/myProvider';
-import StudioGhibli from './pages/StudioGhibli';
+import pages from './pages';
 
 function App() {
   return (
-    <Provider>
-      <StudioGhibli />
-    </Provider>
+    <Switch>
+      <Route exact path="/" component={ pages.Films } />
+      <Route exact path="/people" component={ pages.People } />
+      <Route exact path="/location" component={ pages.Location } />
+    </Switch>
   );
 }
 

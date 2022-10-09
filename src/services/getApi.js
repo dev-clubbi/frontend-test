@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const getAPI = () => axios.get(
-    'https://ghibliapi.herokuapp.com/films'
+const getAPI = (endpoint) => axios.get(
+    `https://ghibliapi.herokuapp.com/${endpoint}`
     )
     .then((response) => response)
     .catch((error) => error);
