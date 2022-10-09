@@ -4,7 +4,6 @@ import getAPI from '../../../services/getApi';
 
 function PeopleTable() {
   const [data, setData] = useState([]);
-  // const [endpoint, setEndpoint ] = useState('films');
 
   useEffect(() => {
       const peopleList = async () => {

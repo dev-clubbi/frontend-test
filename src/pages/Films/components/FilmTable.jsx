@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
-// import myContext from '../../../context/myContext';
 import getAPI from '../../../services/getApi';
 
 function FilmTable() {
   const [data, setData] = useState([]);
-  // const [endpoint, setEndpoint ] = useState('films');
 
   useEffect(() => {
       const filmsList = async () => {
