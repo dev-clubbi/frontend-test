@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import myContext from '../../../context/myContext';
 import getAPI from '../../../services/getApi';
+import { Table } from 'reactstrap';
 
 function PeopleTable() {
   const { dataPeople, setDataPeople, filter, dataFiltered } = useContext(myContext);
@@ -20,7 +21,7 @@ function PeopleTable() {
   };
 
   return (
-    <table>
+    <Table striped bordered size="sm">
       <thead>
         <tr>
           <th>Nome</th>  
@@ -49,14 +50,14 @@ function PeopleTable() {
             <td>{age}</td>
             <td>{eyeColor}</td>
             <td>{hairColor}</td>
-            <td>{films[0]}</td>
+            <td>{films}</td>
             <td>
               <a href={url}>URL</a>
             </td>
           </tr>
         ))}
       </tbody>
-    </table>
+    </Table>
   );
 }
 

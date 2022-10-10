@@ -1,0 +1,13 @@
+.table-container {
+    padding: 50px;
+}
+
+td {
+    text-align:center;
+}
+
+.td-description {
+    display: block;
+    width: 200px;
+    overflow-y: scroll;
+}

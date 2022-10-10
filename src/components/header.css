@@ -1,0 +1,28 @@
+.header {
+    background-image: url(https://64.media.tumblr.com/c0c4a77628ee0d1eb5d72cf2c73f7cbf/tumblr_p0icid2Nfb1uaogmwo6_1280.png);
+    background-size: cover;
+    box-sizing: border-box;
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    padding: 80px;
+}
+
+.link-container {
+    margin-bottom: 20px;
+}
+
+input {
+    border: 0 none;
+    border-radius: 8px;
+    text-align: center;
+    padding: 5px;
+    width: 500px;
+}
+
+a:link {
+    text-decoration: none;
+    padding: 20px;
+    margin-left: 30px;
+}
+

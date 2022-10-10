@@ -1,6 +1,7 @@
 import React, { useEffect, useContext } from 'react';
 import getAPI from '../../../services/getApi';
 import myContext from '../../../context/myContext'
+import { Table } from 'reactstrap';
 
 function LocationTable() {
   const { dataLocation, setDataLocation, filter, dataFiltered } = useContext(myContext);
@@ -21,7 +22,7 @@ function LocationTable() {
   };
 
   return (
-    <table>
+    <Table striped bordered size="sm">
       <thead>
         <tr>
           <th>Nome</th>  
@@ -57,7 +58,7 @@ function LocationTable() {
           </tr>
         ))}
       </tbody>
-    </table>
+    </Table>
   );
 }
 
