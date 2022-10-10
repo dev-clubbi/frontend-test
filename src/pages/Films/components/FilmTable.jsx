@@ -1,16 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import getAPI from '../../../services/getApi';
+import myContext from '../../../context/myContext'
 
 function FilmTable() {
-  const [data, setData] = useState([]);
+  const { dataFilm, setDataFilm, filter, dataFiltered } = useContext(myContext);
 
   useEffect(() => {
       const filmsList = async () => {
         const { data } = await getAPI('films');
-        setData(data);
+        setDataFilm(data);
       };
       filmsList();
   }, []);
+
+  const filtered = () => {
+    const result = filter ? dataFiltered : dataFilm;  
+  return result;
+  };
 
   return (
     <table>
@@ -30,7 +36,7 @@ function FilmTable() {
         </tr>
       </thead>
       <tbody>
-        {data.map(({
+        {filtered().map(({
           id,
           image,
           title,

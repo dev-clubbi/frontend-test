@@ -1,18 +1,23 @@
-import React, { useState, useEffect } from 'react';
-// import myContext from '../../../context/myContext';
+import React, { useContext, useEffect } from 'react';
+import myContext from '../../../context/myContext';
 import getAPI from '../../../services/getApi';
 
 function PeopleTable() {
-  const [data, setData] = useState([]);
+  const { dataPeople, setDataPeople, filter, dataFiltered } = useContext(myContext);
 
   useEffect(() => {
       const peopleList = async () => {
         const { data } = await getAPI('people');
-        setData(data);
+        setDataPeople(data);
       };
       peopleList();
   }, []);
 
+  const filtered = () => {
+    const result = filter ? dataFiltered : dataPeople;  
+  console.log(dataPeople);
+  return result;
+  };
 
   return (
     <table>
@@ -28,7 +33,7 @@ function PeopleTable() {
         </tr>
       </thead>
       <tbody>
-        {data.map(({
+        {filtered().map(({
           id,
           name,
           gender,

@@ -1,16 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 import getAPI from '../../../services/getApi';
+import myContext from '../../../context/myContext'
 
 function LocationTable() {
-  const [data, setData] = useState([]);
+  const { dataLocation, setDataLocation, filter, dataFiltered } = useContext(myContext);
+  // const [dataInfo, setDataInfo] = useState([]);
 
   useEffect(() => {
       const locationList = async () => {
         const { data } = await getAPI('locations');
-        setData(data);
+        setDataLocation(data);
+        // setDataInfo(data);
       };
       locationList();
   }, []);
+
+  const filtered = () => {
+    const result = filter ? dataFiltered : dataLocation;  
+  return result;
+  };
 
   return (
     <table>
@@ -26,7 +34,7 @@ function LocationTable() {
         </tr>
       </thead>
       <tbody>
-        {data.map(({
+        {filtered().map(({
           id,
           name,
           climate,
