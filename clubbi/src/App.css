@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color:dimgray;
+}
+
 .style {
   align-items: center;
   display: flex;
@@ -22,6 +26,27 @@
 
 .fw-bold:hover {
   color:blueviolet;
+}
+
+.cards {
+  display: flex;
+  height: 450px;
+  flex-wrap: wrap;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#films-card {
+  border: 2px solid black;
+  text-align: center;
+  width: 350px;
+  margin: 5px;
+ background-color:orangered;
+}
+
+.films-image {
+  width: 200px;
+  
 }
 
 @media only screen and (max-width: 600px) {

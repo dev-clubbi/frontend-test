@@ -5,24 +5,26 @@ class Locations extends Component {
     super(props);
 
     this.state = {
-        name: '',
-        locations: [],
+      name: '',
+      locations: [],
     }
 
     this.myLocationApi = this.myLocationApi.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
-  
+
   async myLocationApi() {
     const response = await fetch("https://ghibliapi.herokuapp.com/locations");
     const data = await response.json();
-    return this.setState({ locations: data
-      .filter(({name}) => name.toLocaleUpperCase().includes(this.state.name.toLocaleUpperCase()) ) })
+    return this.setState({
+      locations: data
+        .filter(({ name }) => name.toLocaleUpperCase().includes(this.state.name.toLocaleUpperCase()))
+    })
   }
 
   handleChange(e) {
     e.preventDefault();
-    this.setState({ name: e.target.value})
+    this.setState({ name: e.target.value })
   }
 
   componentDidMount() {
@@ -32,10 +34,10 @@ class Locations extends Component {
   componentDidUpdate() {
     this.myLocationApi();
   }
-    
+
   render() {
     if (this.state.locations.length === 0 && this.state.name === '') {
-      return(<h1 id="loading">Loading...</h1>)
+      return (<h1 id="loading">Loading...</h1>)
     }
 
     return (
@@ -46,13 +48,12 @@ class Locations extends Component {
           value={this.state.name}
           onChange={this.handleChange}
         />
-
         <div id='grade'>
-          { this.state.locations.map(({ name }, index) => (
+          {this.state.locations.map(({ name }, index) => (
             <h3 key={index} className='locationList'>
               {name}
             </h3>
-          )) }
+          ))}
         </div>
       </div>
     )
