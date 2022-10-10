@@ -4,6 +4,8 @@ import React, { Component } from 'react'
 import Actor from './Components/Actor';
 import Films from './Components/Films';
 import Location from './Components/Location';
+import { Route, Routes } from 'react-router-dom';
+import Home from './Components/Home';
 
 export default class App extends Component {
   // constructor(props) {
@@ -12,14 +14,12 @@ export default class App extends Component {
 
   render() {
     return (
-      <div>
-        <h1 className='fw-bold'>Clubbi</h1>
-        <section>
-          <Actor />
-          <Films />
-          <Location />
-        </section>
-      </div>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='actor' element={<Actor />} />
+        <Route path='films' element={<Films />} />
+        <Route path='location' element={<Location />} />
+      </Routes>
     )
   }
 }

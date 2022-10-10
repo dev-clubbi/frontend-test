@@ -1,29 +1,62 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import apiLocation from '../redux/actions';
 
- class Location extends Component {
-  componentDidMount() {
-    console.log(apiLocation()[0]);
+class Locations extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+        name: '',
+        locations: [],
+    }
+
+    this.myLocationApi = this.myLocationApi.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
+  
+  async myLocationApi() {
+    const response = await fetch("https://ghibliapi.herokuapp.com/locations");
+    const data = await response.json();
+    return this.setState({ locations: data
+      .filter(({name}) => name.toLocaleUpperCase().includes(this.state.name.toLocaleUpperCase()) ) })
+  }
+
+  handleChange(e) {
+    e.preventDefault();
+    this.setState({ name: e.target.value})
+  }
+
+  componentDidMount() {
+    this.myLocationApi();
+  }
+
+  componentDidUpdate() {
+    this.myLocationApi();
+  }
+    
   render() {
+    if (this.state.locations.length === 0 && this.state.name === '') {
+      return(<h1 id="loading">Loading...</h1>)
+    }
+
     return (
-      <div className='style'>
-        <input type="text" className="form-control" placeholder='Location'/>
-        <button type="submit" className="btn btn-outline-primary">Buscar locação</button>
+      <div>
+        <input
+          type="text"
+          name={this.state.name}
+          value={this.state.name}
+          onChange={this.handleChange}
+        />
+
+        <div id='grade'>
+          { this.state.locations.map(({ name }, index) => (
+            <h3 key={index} className='locationList'>
+              {name}
+            </h3>
+          )) }
+        </div>
       </div>
     )
   }
 }
 
-// const mapStateToProps = (state) => (
-
-// );
-
-const mapDispatchToProps = (dispatch) => (
-  {
-    locationInfo: () => dispatch()
-  }
-);
-
-export default connect(null, mapDispatchToProps)(Location);
+export default Locations;
