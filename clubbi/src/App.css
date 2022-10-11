@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color:dimgray;
+  background-color:black;
 }
 
 .style {
@@ -13,6 +13,32 @@ body {
   display: flex;
   justify-content: center;
   padding: 0.5em;
+}
+
+#home {
+  text-align: center;
+  margin-top: 200px;
+}
+
+#welcome {
+  color: white;
+  margin-left: -120px;
+  margin-bottom: -25px;
+}
+
+#clubbi {
+  color:darkred;
+  font-weight: 900;
+  font-size: 6em;
+}
+
+#info {
+  color:lightgray;
+}
+
+#link {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .form-control {
@@ -32,22 +58,62 @@ body {
   display: flex;
   height: 450px;
   flex-wrap: wrap;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 4%;
+  margin-right: 4%;
+ 
 }
 
 #films-card {
   border: 2px solid black;
   text-align: center;
-  width: 350px;
+  width: 400px;
   margin: 5px;
- background-color:orangered;
+ background-color:crimson;
+ border-radius: 20px;
+}
+#films-card:hover {
+  background-color: hotpink;
 }
 
 .films-image {
   width: 200px;
-  
+  height: 190px;
 }
+
+.div-input {
+  text-align: center;
+}
+
+.description {
+  overflow: scroll;
+  width: 380px;
+  height: 100px;
+  margin-left: 6px;
+}
+
+/* #grade {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+} */
+
+.form-control {
+  text-align: center;
+  border: 1px solid black;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.list {
+  color:darkcyan;
+  background-color: lightgrey;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
 
 @media only screen and (max-width: 600px) {
   body {

@@ -41,16 +41,21 @@ class Locations extends Component {
     }
 
     return (
-      <div>
+      <div className='div-input'>
         <input
           type="text"
           name={this.state.name}
           value={this.state.name}
           onChange={this.handleChange}
+          className="form-control"
+          placeholder='Pesquise por localização'
         />
-        <div id='grade'>
+
+        <a href="actor" className="btn btn-outline-primary">Actor</a>
+        <a href="films" className="btn btn-outline-primary">Films</a>
+        <div id="position-relative m-4">
           {this.state.locations.map(({ name }, index) => (
-            <h3 key={index} className='locationList'>
+            <h3 key={index} className='list'>
               {name}
             </h3>
           ))}

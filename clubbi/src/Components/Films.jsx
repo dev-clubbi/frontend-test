@@ -40,22 +40,25 @@ import '../App.css';
     }
 
     return (
-      <div>
+      <div className='div-input'>
         <input
           type="text"
           name={this.state.title}
           value={this.state.title}
           onChange={this.handleChange}
           className="form-control"
+          placeholder='Pesquise por filme'
         />
-
+        
+        <a href="actor" className="btn btn-outline-primary">Actor</a>
+        <a href="location" className="btn btn-outline-primary">Location</a>
         <div className='cards'>
           { this.state.films.map(({ title, image, description, director, release_date }) => (
             <div key={title} id='films-card'>
               <h1>{ title }</h1>
               <img src={ image } alt={ title } className='films-image'/>
               <h4> <strong>Ano de criação:</strong> { release_date }</h4>
-              <p> <strong> Descrição:</strong> { description }</p>
+              <p className='description'> <strong> Descrição:</strong> { description }</p>
               <h4> <strong> Diretor:</strong> { director }</h4>
             </div>
           )) }
