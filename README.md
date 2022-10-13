@@ -45,7 +45,7 @@ O projeto pode ser construído com npm ou yarn, então escolha uma das abordagen
 
 ```bash
 3. npm install
-4. npm Start
+4. npm start
 Nota - Abre http://localhost:3000 para visualizá-lo em seu navegador.
 ```
 
@@ -53,8 +53,10 @@ Ou
 
 ```bash
 3. yarn install
-4. yarn dev
+4. yarn start
 ```
+
+NOTA - Esse projeto roda em Docker Compose
 
 ### Autora
 

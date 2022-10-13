@@ -3,6 +3,7 @@ import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import renderWithRouter from './renderWithRouter';
 import App from '../App';
+// testes não estão rodando por conflitos de lint do ECM5
 
 describe('Testando o componente App.', () => {
   it('Teste se o topo da aplicação contém um conjunto fixo de links', () => {
