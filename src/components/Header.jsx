@@ -13,8 +13,8 @@ function Header({ props }) {
 
     const filterName = data.filter(({ name, title }) => {
       if (name)
-      return name.toLowerCase().startsWith(value.toLowerCase())
-      else return title.toLowerCase().startsWith(value.toLowerCase());
+      return name.toLowerCase().includes(value.toLowerCase())
+      else return title.toLowerCase().includes(value.toLowerCase());
     });
 
     setDataFiltered(filterName);
